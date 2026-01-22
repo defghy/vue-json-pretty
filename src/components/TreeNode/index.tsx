@@ -133,7 +133,6 @@ export default defineComponent({
     collapsed: Boolean,
     // Whether the current node is checked(When using the selection function).
     checked: Boolean,
-    style: Object as PropType<CSSProperties>,
     onSelectedChange: {
       type: Function as PropType<(node: NodeDataType) => void>,
     },
@@ -282,7 +281,6 @@ export default defineComponent({
           }}
           onClick={handleNodeClick}
           onMouseover={handleNodeMouseover}
-          style={props.style}
         >
           {props.showLineNumber && <span class="vjs-node-index">{node.id + 1}</span>}
 
@@ -307,7 +305,7 @@ export default defineComponent({
                 }}
               >
                 {Array.from(Array(props.indent)).map(() => (
-                  <>&nbsp;</>
+                  <span>&nbsp;</span>
                 ))}
               </div>
             ))}

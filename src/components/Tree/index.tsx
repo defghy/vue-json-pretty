@@ -62,7 +62,6 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
-    style: Object as PropType<CSSProperties>,
     onSelectedChange: {
       type: Function as PropType<(newVal: string | string[], oldVal: string | string[]) => void>,
     },
@@ -479,9 +478,8 @@ export default defineComponent({
             props.showLineNumber
               ? {
                   paddingLeft: `${Number(originFlatData.value.length.toString().length) * 12}px`,
-                  ...props.style,
                 }
-              : props.style
+              : {}
           }
         >
           {props.virtual ? (

@@ -9,9 +9,10 @@
     ["@babel/preset-typescript", {
       "allExtensions": true,
       "isTSX": true
-    }]
+    }],
+    "@vue/babel-preset-jsx"
   ],
-  "plugins": ["@babel/plugin-transform-runtime", "@vue/babel-plugin-jsx"],
+  "plugins": ["@babel/plugin-transform-runtime"],
   "env": {
     "test": {
       "presets": ["@babel/preset-env"],
