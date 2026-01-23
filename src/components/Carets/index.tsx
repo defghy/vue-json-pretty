@@ -1,6 +1,8 @@
 import { defineComponent, PropType, h } from 'vue';
 import './styles.less';
 
+import { noop } from '../../utils'
+
 export default defineComponent({
   props: {
     nodeType: {
@@ -22,7 +24,7 @@ export default defineComponent({
     if (!isOpen && !isClose) return null;
 
     return (
-      <span class={`vjs-carets vjs-carets-${isOpen ? 'open' : 'close'}`} onClick={onClick}>
+      <span class={`vjs-carets vjs-carets-${isOpen ? 'open' : 'close'}`} onClick={onClick || noop}>
         <svg
           viewBox="0 0 1024 1024"
           focusable="false"
