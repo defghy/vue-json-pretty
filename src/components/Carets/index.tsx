@@ -9,7 +9,13 @@ export default defineComponent({
       required: true,
       type: String,
     },
-    onClick: Function as PropType<(e: MouseEvent) => void>,
+    onClick: Function
+  },
+
+  setup(props, { emit }) {
+    const onClick = (evt: Event) => emit('click', evt)
+
+    return { onClick }
   },
 
   render(h) {

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "noEmit": true,
+    "noEmitOnError": false,
     "target": "esnext",
     "module": "esnext",
     "strict": true,
@@ -8,6 +9,8 @@
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
