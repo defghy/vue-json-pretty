@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from 'vue';
+import { defineComponent, PropType, h } from 'vue';
 import './styles.less';
 
 export default defineComponent({
@@ -10,7 +10,7 @@ export default defineComponent({
     onClick: Function as PropType<(e: MouseEvent) => void>,
   },
 
-  render() {
+  render(h) {
     const { nodeType } = this;
 
     const { onClick } = this;

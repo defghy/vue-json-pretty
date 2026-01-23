@@ -21,7 +21,7 @@ export default defineComponent({
       data: defaultData,
     });
 
-    return () => (
+    return (h) => (
       <VueJsonPretty
         data={state.data}
         showLineNumber

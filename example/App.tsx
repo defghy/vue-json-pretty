@@ -79,7 +79,7 @@ export default defineComponent({
     };
   },
 
-  render() {
+  render(h) {
     const { state, onActiveChange, toggleDarkMode, globalDarkModeState } = this;
 
     return (

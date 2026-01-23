@@ -267,7 +267,7 @@ export default defineComponent({
       );
     };
 
-    return () => {
+    return (h) => {
       const { node } = props;
 
       return (

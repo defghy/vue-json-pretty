@@ -1,4 +1,4 @@
-import { defineComponent, computed, PropType } from 'vue';
+import { defineComponent, computed, PropType, h } from 'vue';
 import './styles.less';
 
 export default defineComponent({
@@ -27,7 +27,7 @@ export default defineComponent({
     };
   },
 
-  render() {
+  render(h) {
     const { uiType, model, $emit } = this;
 
     return (
