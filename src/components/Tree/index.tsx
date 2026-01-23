@@ -8,6 +8,7 @@ import {
   PropType,
   CSSProperties,
   nextTick,
+  h,
 } from 'vue';
 import TreeNode, { treeNodePropsPass, NodeDataType } from 'src/components/TreeNode';
 import { emitError, jsonFlatten, cloneDeep } from 'src/utils';
@@ -413,7 +414,7 @@ export default defineComponent({
       },
     );
 
-    return () => {
+    return (h) => {
       const renderNodeKey = props.renderNodeKey ?? slots.renderNodeKey;
       const renderNodeValue = props.renderNodeValue ?? slots.renderNodeValue;
       const renderNodeActions = props.renderNodeActions ?? slots.renderNodeActions ?? false;
