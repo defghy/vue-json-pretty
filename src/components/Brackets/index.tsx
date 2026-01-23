@@ -13,18 +13,18 @@ export default defineComponent({
   },
 
   setup(props, { emit }) {
-    const onClick = (evt: Event) => emit('click', evt)
+    const handleClick = (evt: Event) => emit('click', evt)
 
-    return { onClick }
+    return { handleClick }
   },
 
   render(h) {
     const { data } = this;
 
-    const { onClick } = this;
+    const { handleClick } = this;
 
     return (
-      <span class="vjs-tree-brackets" onClick={onClick || noop}>
+      <span class="vjs-tree-brackets" onClick={handleClick || noop}>
         {data}
       </span>
     );

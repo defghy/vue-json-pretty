@@ -13,15 +13,15 @@ export default defineComponent({
   },
 
   setup(props, { emit }) {
-    const onClick = (evt: Event) => emit('click', evt)
+    const handleClick = (evt: Event) => emit('click', evt)
 
-    return { onClick }
+    return { handleClick }
   },
 
   render(h) {
     const { nodeType } = this;
 
-    const { onClick } = this;
+    const { handleClick } = this;
 
     const isOpen = nodeType === 'objectStart' || nodeType === 'arrayStart';
 
@@ -30,7 +30,7 @@ export default defineComponent({
     if (!isOpen && !isClose) return null;
 
     return (
-      <span class={`vjs-carets vjs-carets-${isOpen ? 'open' : 'close'}`} onClick={onClick || noop}>
+      <span class={`vjs-carets vjs-carets-${isOpen ? 'open' : 'close'}`} onClick={handleClick || noop}>
         <svg
           viewBox="0 0 1024 1024"
           focusable="false"
