@@ -172,4 +172,6 @@ export function stringToAutoType(source: string): unknown {
   return value;
 }
 
-export const noop = () => {}
+export const noop = () => {
+  return {}
+}
