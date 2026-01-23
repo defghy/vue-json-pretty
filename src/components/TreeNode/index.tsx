@@ -2,7 +2,7 @@ import { defineComponent, reactive, computed, PropType, CSSProperties } from 'vu
 import Brackets from 'src/components/Brackets';
 import CheckController from 'src/components/CheckController';
 import Carets from 'src/components/Carets';
-import { getDataType, JSONFlattenReturnType, JSONDataType, stringToAutoType } from 'src/utils';
+import { getDataType, JSONFlattenReturnType, JSONDataType, stringToAutoType, noop } from 'src/utils';
 import { useClipboard } from 'src/hooks/useClipboard';
 import './styles.less';
 
@@ -328,12 +328,12 @@ export default defineComponent({
                 onClick={
                   props.editable && (!props.editableTrigger || props.editableTrigger === 'click')
                     ? handleValueEdit
-                    : undefined
+                    : noop
                 }
                 onDblclick={
                   props.editable && props.editableTrigger === 'dblclick'
                     ? handleValueEdit
-                    : undefined
+                    : noop
                 }
               >
                 {props.editable && state.editing ? (

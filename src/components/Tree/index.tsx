@@ -11,7 +11,7 @@ import {
   h,
 } from 'vue';
 import TreeNode, { treeNodePropsPass, NodeDataType } from 'src/components/TreeNode';
-import { emitError, jsonFlatten, cloneDeep } from 'src/utils';
+import { emitError, jsonFlatten, cloneDeep, noop } from 'src/utils';
 import './styles.less';
 
 export default defineComponent({
@@ -474,7 +474,7 @@ export default defineComponent({
             'is-virtual': props.virtual,
             dark: props.theme === 'dark',
           }}
-          onScroll={props.virtual ? handleTreeScroll : undefined}
+          onScroll={props.virtual ? handleTreeScroll : noop}
           style={
             props.showLineNumber
               ? {
