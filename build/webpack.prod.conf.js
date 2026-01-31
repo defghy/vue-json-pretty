@@ -30,6 +30,9 @@ const webpackConfig = merge(baseWebpackConfig, {
       'process.env': env,
     }),
   ],
+  optimization: {
+    minimize: false
+  }
 });
 
 if (!isExampleEnv) {
