@@ -1,3 +1,5 @@
+<h1>Vue@2.7 version of <a href="https://github.com/leezng/vue-json-pretty" target="_blank">Vue Json Pretty</a></h1>
+
 <p align="center">
   <a href="https://github.com/leezng/vue-json-pretty">
     <img width="200" src="./static/logo.svg">
